@@ -77,9 +77,12 @@ app.post('/callclarifaiapi', (req, res) => { image.handleClarifaiApiCall(req, re
 // returns 404 error is user is not found
 app.put('/image', (req, res) => { image.handleIncrementEntries(req, res, database) } )
 
+// Chanching the code below for deployment.
+// Listening to port number provided by environmental variables.
 
-app.listen(3002, () =>{
-	console.log('app is running on port 3002');
+// app.listen(3002, () => {
+app.listen(process.env.PORT, () => {
+	console.log(`app is running on port ${process.env.PORT}`);
 })
 
 /*
