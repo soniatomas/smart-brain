@@ -36,6 +36,7 @@ const database = knex({
 */
 // connecting to heroku database
 // connetionString is the heroku database url
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
 const database = knex({
 			client: 'pg',
 			connection: {
