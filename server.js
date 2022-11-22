@@ -22,6 +22,7 @@ const profile = require('./controllers/profile');
 
 // connecting to our postgresdb
 // the ip 127.0.0.1 is localhost
+/*
 const database = knex({
   client: 'pg',
   connection: {
@@ -31,6 +32,16 @@ const database = knex({
     password : 'test',
     database : 'smart-brain'
   }
+});
+*/
+// connecting to heroku database
+// connetionString is the heroku database url
+const database = knex({
+			client: 'pg',
+			connection: {
+				connectionString: process.env.DATABASE_URL,
+				ssl: true,
+			}
 });
 
 const app = express();
