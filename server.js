@@ -44,6 +44,8 @@ const database = knex({
 			}
 });
 
+console.log(database);
+
 const app = express();
 
 // adding body-parser middleware so we can read user responses
