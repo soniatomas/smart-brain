@@ -45,7 +45,7 @@ const database = knex({
 			}
 });
 
-console.log(database);
+// console.log(database);
 
 const app = express();
 
